@@ -47,4 +47,5 @@ exports.add = function(debug) {
       if (debug) console.log("Added Object." + name + "()");
     }
   });
+  return Object;
 };
