@@ -39,7 +39,7 @@ Grab a copy of the source, and require it in your app:
 
     require("./path/to/object-additions").add();
 
-Or, soon, install it with NPM:
+Or install it with NPM:
 
     $ npm install object-additions
 
