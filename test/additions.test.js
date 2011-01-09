@@ -20,6 +20,7 @@ module.exports = {
   },
   "isUndefined": function() {
     assert.ok(Object.isUndefined(undefined));
+    assert.ok(Object.isUndefined());
   },
   "isString": function() {
     assert.ok(Object.isString("hi"));
