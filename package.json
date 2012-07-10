@@ -1,7 +1,7 @@
 {
   "name" : "object-additions",
   "description" : "Methods which extend the Object object.",
-  "version" : "0.5.1", 
+  "version" : "0.6.0", 
   "homepage" : "http://github.com/dandean/object-additions",
   "author" : "Dan Dean <me@dandean.com> (http://dandean.com)",
   "contributors" : [],
@@ -15,6 +15,12 @@
     "url" : "http://github.com/dandean/object-additions/issues"
   },
   "main" : "index",
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
   "engines" : { "node" : ">=0.2.0" },
   "licenses" : [{
     "type" : "MIT",

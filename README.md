@@ -20,13 +20,13 @@ Usage
 
 To get a reference to the additions, while NOT modifying the global `Object` object, just require the package:
 
-    var additions = require("object-additions").object;
+    var additions = require("object-additions");
     additions.isString("hi");
     // -> true
 
-If, on the other hand, you _want_ to just add these to the global `Object` object, call the `add` method:
+If, on the other hand, you _want_ to just add these to the global `Object` object, call the `install` method:
 
-    require("object-additions").add();
+    require("object-additions").install();
     Object.isString("hi");
     // -> true
 
@@ -37,7 +37,7 @@ Installation
 
 Grab a copy of the source, and require it in your app:
 
-    require("./path/to/object-additions").add();
+    require("./path/to/object-additions").install();
 
 Or install it with NPM:
 
@@ -45,4 +45,4 @@ Or install it with NPM:
 
 Then require it in your app: 
 
-    require("object-additions").add();
+    require("object-additions").install();
