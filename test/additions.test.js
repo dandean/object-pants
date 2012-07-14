@@ -1,14 +1,17 @@
-var assert = require("assert");
-
-var additions = require("../index");
+if (typeof window === 'undefined') {
+  var assert = require("assert");
+  var additions = require("../index");
+}
 
 describe('Module', function() {
 
-  it('should not install until install() is called', function() {
-    assert.ok(typeof Object.extend === 'undefined');
-    additions.install();
-    assert.ok(Object.extend == additions.extend);
-  });
+  if (typeof additions != 'undefined') {
+    it('should not install until install() is called', function() {
+      assert.ok(typeof Object.extend === 'undefined');
+      additions.install();
+      assert.ok(Object.extend == additions.extend);
+    });
+  }
 
   describe('extend', function() {
     it('should extend an object', function() {
