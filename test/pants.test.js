@@ -1,15 +1,15 @@
 if (typeof window === 'undefined') {
   var assert = require("assert");
-  var additions = require("../index");
+  var pants = require("../index");
 }
 
 describe('Module', function() {
 
-  if (typeof additions != 'undefined') {
+  if (typeof pants != 'undefined') {
     it('should not install until install() is called', function() {
       assert.ok(typeof Object.extend === 'undefined');
-      additions.install();
-      assert.ok(Object.extend == additions.extend);
+      pants.install();
+      assert.ok(Object.extend == pants.extend);
     });
   }
 

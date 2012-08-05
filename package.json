@@ -1,18 +1,18 @@
 {
-  "name" : "object-additions",
-  "description" : "Methods which extend the Object object.",
+  "name" : "object-pants",
+  "description" : "Some pants for the Object.",
   "version" : "0.6.0", 
-  "homepage" : "http://github.com/dandean/object-additions",
+  "homepage" : "http://github.com/dandean/object-pants",
   "author" : "Dan Dean <me@dandean.com> (http://dandean.com)",
   "contributors" : [],
   "repository" :
   {
     "type" : "git",
-    "url" : "http://github.com/dandean/object-additions.git"
+    "url" : "http://github.com/dandean/object-pants.git"
   },
   "bugs" : {
     "mail" : "me@dandean.com",
-    "url" : "http://github.com/dandean/object-additions/issues"
+    "url" : "http://github.com/dandean/object-pants/issues"
   },
   "main" : "index",
   "scripts": {
@@ -24,6 +24,6 @@
   "engines" : { "node" : ">=0.2.0" },
   "licenses" : [{
     "type" : "MIT",
-    "url" : "http://github.com/dandean/object-additions/raw/master/LICENSE"
+    "url" : "http://github.com/dandean/object-pants/raw/master/LICENSE"
   }]
 }
