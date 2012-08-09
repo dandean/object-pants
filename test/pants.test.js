@@ -3,7 +3,7 @@ if (typeof window === 'undefined') {
   var pants = require("../index");
 }
 
-describe('Module', function() {
+describe('Object Pants', function() {
 
   if (typeof pants != 'undefined') {
     it('should not install until install() is called', function() {
