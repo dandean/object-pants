@@ -5,73 +5,80 @@
     return Object.prototype.toString.call(object);
   }
 
+  /**
+   * values(object) -> Array
+   *
+   * Returns an array of all values on the object for its enumerable keys.
+  **/
+  function values(object) {
+    return Object.keys(object).map(function(key) {
+      return object[key];
+    });
+  }
+
+  /**
+   * extend(destination, source) -> undefined
+   *
+   * Copies every member from `source` to `destination`.
+  **/
+  function extend(destination, source) {
+    for (var property in source)
+      destination[property] = source[property];
+  }
+  
+  /**
+   * isString(object) -> Boolean
+   *
+   * Checks if `object` is a `String`.
+  **/
+  function isString(object) {
+    return getType(object) === "[object String]";
+  }
+  
+  /**
+   * isNumber(object) -> Boolean
+   *
+   * Checks if `object` is a `Number`.
+  **/
+  function isNumber(object) {
+    return getType(object) === "[object Number]";
+  }
+  
+  /**
+   * isDate(object) -> Boolean
+   *
+   * Checks if `object` is a `Date`.
+  **/
+  function isDate(object) {
+    return getType(object) === "[object Date]";
+  }
+  
+  /**
+   * isUndefined(object) -> Boolean
+   *
+   * Checks if `object` is `undefined`.
+  **/
+  function isUndefined(object) {
+    return typeof object === "undefined";
+  }
+  
+  /**
+   * isFunction(object) -> Boolean
+   *
+   * Checks if `object` is a `Function`.
+  **/
+  function isFunction(object) {
+    return getType(object) === "[object Function]";
+  }
+
   var Extensions = {
-
-    /**
-     * values(object) -> Array
-     *
-     * Returns an array of all values on the object for its enumerable keys.
-    **/
-    values: function(object) {
-      return Object.keys(object).map(function(key) {
-        return object[key];
-      });
-    },
-
-    /**
-     * extend(destination, source) -> undefined
-     *
-     * Copies every member from `source` to `destination`.
-    **/
-    extend: function(destination, source) {
-      for (var property in source)
-        destination[property] = source[property];
-    },
-    
-    /**
-     * isString(object) -> Boolean
-     *
-     * Checks if `object` is a `String`.
-    **/
-    isString: function(object) {
-      return getType(object) === "[object String]";
-    },
-    
-    /**
-     * isNumber(object) -> Boolean
-     *
-     * Checks if `object` is a `Number`.
-    **/
-    isNumber: function(object) {
-      return getType(object) === "[object Number]";
-    },
-    
-    /**
-     * isDate(object) -> Boolean
-     *
-     * Checks if `object` is a `Date`.
-    **/
-    isDate: function(object) {
-      return getType(object) === "[object Date]";
-    },
-    
-    /**
-     * isUndefined(object) -> Boolean
-     *
-     * Checks if `object` is `undefined`.
-    **/
-    isUndefined: function(object) {
-      return typeof object === "undefined";
-    },
-    
-    /**
-     * isFunction(object) -> Boolean
-     *
-     * Checks if `object` is a `Function`.
-    **/
-    isFunction: function(object) {
-      return getType(object) === "[object Function]";
-    }
+    values: values,
+    extend: extend,
+    isString: isString,
+    isNumber: isNumber,
+    isDate: isDate,
+    isUndefined: isUndefined,
+    isFunction: isFunction
   };
 
   /**
